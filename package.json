@@ -1,0 +1,40 @@
+{
+  "name": "supercount",
+  "version": "1.0.0",
+  "description": "a minimal looking daily countdown notifier",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "npx ts-node-dev --respawn --transpile-only src/index.ts",
+    "lint:fix": "eslint --fix --ext .ts ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hari-uc/supercount.git"
+  },
+  "keywords": [
+    "Discord",
+    "Bot",
+    "countdown",
+    "notification",
+    "alerts",
+    "reminder",
+    "opensource",
+    "dailyupdates",
+    "event-tracker"
+  ],
+  "author": "HARI KRISHNAN",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hari-uc/supercount/issues"
+  },
+  "homepage": "https://github.com/hari-uc/supercount#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.2.0",
+    "@types/node": "^20.12.11",
+    "@typescript-eslint/eslint-plugin": "^7.11.0",
+    "@typescript-eslint/parser": "^7.11.0",
+    "eslint": "^8.57.0",
+    "ts-node": "^10.9.2",
+    "typescript-eslint": "^7.8.0"
+  }
+}
