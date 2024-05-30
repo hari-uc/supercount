@@ -1,40 +1,51 @@
 {
-  "name": "supercount",
-  "version": "1.0.0",
-  "description": "a minimal looking daily countdown notifier",
-  "main": "src/index.ts",
-  "scripts": {
-    "dev": "npx ts-node-dev --respawn --transpile-only src/index.ts",
-    "lint:fix": "eslint --fix --ext .ts ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hari-uc/supercount.git"
-  },
-  "keywords": [
-    "Discord",
-    "Bot",
-    "countdown",
-    "notification",
-    "alerts",
-    "reminder",
-    "opensource",
-    "dailyupdates",
-    "event-tracker"
-  ],
-  "author": "HARI KRISHNAN",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/hari-uc/supercount/issues"
-  },
-  "homepage": "https://github.com/hari-uc/supercount#readme",
-  "devDependencies": {
-    "@eslint/js": "^9.2.0",
-    "@types/node": "^20.12.11",
-    "@typescript-eslint/eslint-plugin": "^7.11.0",
-    "@typescript-eslint/parser": "^7.11.0",
-    "eslint": "^8.57.0",
-    "ts-node": "^10.9.2",
-    "typescript-eslint": "^7.8.0"
-  }
+   "name": "supercount",
+   "version": "1.0.0",
+   "description": "a minimal looking daily countdown notifier",
+   "main": "src/index.ts",
+   "scripts": {
+      "dev": "npx ts-node-dev --respawn --transpile-only src/index.ts",
+      "lint:fix": "eslint --fix --ext .ts .",
+      "start": "ts-node src/index.ts",
+      "typeorm": "typeorm-ts-node-commonjs"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/hari-uc/supercount.git"
+   },
+   "keywords": [
+      "Discord",
+      "Bot",
+      "countdown",
+      "notification",
+      "alerts",
+      "reminder",
+      "opensource",
+      "dailyupdates",
+      "event-tracker"
+   ],
+   "author": "HARI KRISHNAN",
+   "license": "MIT",
+   "bugs": {
+      "url": "https://github.com/hari-uc/supercount/issues"
+   },
+   "homepage": "https://github.com/hari-uc/supercount#readme",
+   "devDependencies": {
+      "@eslint/js": "^9.2.0",
+      "@types/node": "^16.11.10",
+      "@typescript-eslint/eslint-plugin": "^7.11.0",
+      "@typescript-eslint/parser": "^7.11.0",
+      "eslint": "^8.57.0",
+      "ts-node": "10.9.1",
+      "typescript": "4.5.2",
+      "typescript-eslint": "^7.8.0"
+   },
+   "dependencies": {
+      "dayjs": "^1.11.11",
+      "discord.js": "^14.15.2",
+      "dotenv": "^16.4.5",
+      "reflect-metadata": "^0.1.13",
+      "sqlite3": "^5.0.2",
+      "typeorm": "0.3.20"
+   }
 }
