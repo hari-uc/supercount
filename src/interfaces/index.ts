@@ -1,2 +1,3 @@
-export { Command } from "./Command";
+export { prefixCommand } from "./prefixCommand";
+export { SlashCommand } from "./slashCommand";
 export { Event } from "./Event";

@@ -1,9 +1,14 @@
-import ExtendedClient from "./client";
-import { Partials, GatewayIntentBits } from "discord.js";
+import { ExtendedClient } from "./client";
+import { AppDataSource } from "./data-source";
 
-const client = new ExtendedClient({
-  intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages],
-  partials: [Partials.Message]
-});
+const client = new ExtendedClient();
 
 client.init();
+
+AppDataSource.initialize().then(() => {
+        console.log("Database initialized");
+})
+.catch(error => {
+        console.error("Error initializing database", error);
+});
+

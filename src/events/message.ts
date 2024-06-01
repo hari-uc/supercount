@@ -1,22 +1,22 @@
-import { Event, Command } from "../interfaces";
+/* eslint-disable arrow-parens */
+import { ExtendedClient } from "../client";
+import { Event, prefixCommand } from "../interfaces";
 import { Message } from "discord.js";
 
-const event: Event = {
+export const event: Event = {
   name: "messageCreate",
-  run: (client, message: Message) => {
+  run: (client: ExtendedClient, message: Message) => {
     if (message.author.bot) return;
-    if (!message.content.startsWith(process.env.PREFIX || "!")) return;
+    if (!message.content.startsWith("!")) return;
 
-    const args = message.content
-      .slice(process.env.PREFIX?.length)
-      .trim()
-      .split(/ +/);
+    const args = message.content.slice("!".length).trim().split(/ +/);
     const commandName = args.shift()?.toLowerCase();
+
     const command =
-      client.commands.get(commandName) ||
-      client.commands.find(
-        cmd => cmd.aliases && cmd.aliases.includes(commandName)
-      );
+      (client.commands.get(commandName) as prefixCommand) ||
+      (client.commands.find((cmd: prefixCommand) =>
+        cmd.aliases?.includes(commandName)
+      ) as prefixCommand);
     if (!command) return;
 
     try {

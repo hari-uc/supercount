@@ -41,6 +41,8 @@
       "typescript-eslint": "^7.8.0"
    },
    "dependencies": {
+      "canvas": "^2.11.2",
+      "chrono-node": "^2.7.6",
       "dayjs": "^1.11.11",
       "discord.js": "^14.15.2",
       "dotenv": "^16.4.5",

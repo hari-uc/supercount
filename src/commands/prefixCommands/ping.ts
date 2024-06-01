@@ -1,6 +1,6 @@
-import { Command } from "../interfaces";
+import { prefixCommand } from "../../interfaces/prefixCommand";
 
-export const command: Command = {
+export const command: prefixCommand = {
   name: "ping",
   description: "Ping!",
   aliases: ["p"],
